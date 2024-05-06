@@ -90,7 +90,7 @@ def new_feedback(username):
         db.session.commit()
         return redirect(f"/users/{feedback.username}")
     else:
-        return render_template("feedback/new.html", form=form)
+        return render_template("feedback/add.html", form=form)
 
 @app.route("/feedback/<int:feedback_id>/update", methods=["GET", "POST"])
 def update_feedback(feedback_id):
